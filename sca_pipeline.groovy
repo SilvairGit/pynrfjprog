@@ -6,15 +6,14 @@
 // service to your git repository.
 // During the first launch, you have to enter ALTERNATIVE_VERSION parameter.
 
-
-@Library('JenkinsMain@2.16.15')_
+@Library('JenkinsMain@2.16.36')_
 
 
 pipelinePythonSCA(
     baseBranch: "fix_problem_with_concurrent_access_via_multiapi",
     agentLabel: "pylint",
     pythonVersion: '3.6',
-    installFromSetup: true,
+    packages: ["."],
     runPipCheck: true,
     runUnitTests: false,
 )
