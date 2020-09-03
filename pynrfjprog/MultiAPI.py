@@ -135,7 +135,6 @@ class MultiAPI(object):
                 raise TimeoutError("CmdQueue is full and was not cleared in 10 seconds!")
 
         if ack.exception is not None:
-            print(ack.stacktrace)
             raise ack.exception
         if ack.result is not None:
             return ack.result
