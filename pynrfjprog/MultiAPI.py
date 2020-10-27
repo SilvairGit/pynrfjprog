@@ -161,7 +161,6 @@ class MultiAPI(object):
             ack = self._CmdAckPipeHost.recv()
 
             if ack.exception is not None:
-                print(ack.stacktrace)
                 raise ack.exception
             if ack.result is not None:
                 return ack.result
