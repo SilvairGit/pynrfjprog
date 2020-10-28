@@ -24,7 +24,7 @@ setup(
 
     author='Nordic Semiconductor ASA',
 
-    license=open('LICENSE.txt').read(),
+    license=open('LICENSE').read(),
 
     classifiers=[
 
