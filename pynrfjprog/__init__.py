@@ -30,4 +30,5 @@ def set_worker_executable(on_load=False):
                 )
 
 
-set_worker_executable(True)
+if os.environ.get("PYNRFJPROG_DO_NOT_SET_WORKER_EXECUTABLE", default="false").lower() != "true":
+    set_worker_executable(True)
