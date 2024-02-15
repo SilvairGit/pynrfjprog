@@ -10,7 +10,7 @@
 
 
 pipelinePythonSCA(
-    baseBranch: "fix_problem_with_concurrent_access_via_multiapi",
+    baseBranch: "master",
     agentLabel: "pylint",
     pythonVersion: '3.6',
     packages: ["."],
