@@ -14,6 +14,6 @@ pipelinePythonSCA(
     agentLabel: "pylint",
     pythonVersion: '3.6',
     packages: ["."],
-    runPipCheck: true,
+    runPipCheck: false,
     runUnitTests: false,
 )

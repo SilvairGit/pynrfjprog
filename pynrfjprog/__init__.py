@@ -6,7 +6,7 @@ Package marker file.
 __version__ = "10.23.0"
 
 import sys
-import os
+from os import environ
 from pathlib import Path
 import stat
 import logging
@@ -31,5 +31,12 @@ def set_worker_executable(on_load=False):
                 )
 
 
-if os.environ.get("PYNRFJPROG_DO_NOT_SET_WORKER_EXECUTABLE", default="false").lower() != "true":
+
+if (
+    environ.get(
+        "PYNRFJPROG_DO_NOT_SET_WORKER_EXECUTABLE",
+        default="false",
+    ).lower()
+    != "true"
+):
     set_worker_executable(True)
