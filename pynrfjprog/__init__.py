@@ -3,7 +3,7 @@ Package marker file.
 
 """
 
-__version__ = "10.23.0.1"
+__version__ = "10.23.0"
 
 import sys
 import os
